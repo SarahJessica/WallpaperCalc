@@ -13,7 +13,7 @@ public class Wall {
         this.wallHeight = wallHeight;
     }
 
-    public static int totalArea(int wallWidth, int wallHeight){
+    public int totalArea(){
         int totalArea = wallHeight * wallWidth;
             return totalArea;
     }

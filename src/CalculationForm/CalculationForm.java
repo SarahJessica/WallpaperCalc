@@ -19,21 +19,29 @@ public class CalculationForm {
         Wallpaper tropicalBirds = new Wallpaper(false, "Tropical Birds", 52, 60, 1000);
         Wallpaper polkaDot = new Wallpaper(true, "Polka Dot", 53, 3, 1050);
 
-        List<Wall> walls = new ArrayList<>();
-        walls.add(new Wall(440, 240));
-        walls.add(new Wall(500, 240));
-        walls.add(new Wall(440, 240));
-        walls.add(new Wall(500, 240));
-//        Wall wall1 = new Wall(440, 240);
-//        Wall wall2 = new Wall(500, 240);
-//        Wall wall3 = new Wall(440, 240);
-//        Wall wall4 = new Wall(500, 240);
+        List<Wall> livingRoomWalls = new ArrayList<>();
+        livingRoomWalls.add(new Wall(440, 240));
+        livingRoomWalls.add(new Wall(500, 240));
+        livingRoomWalls.add(new Wall(440, 240));
+        livingRoomWalls.add(new Wall(500, 240));
 
-        Room livingRoom = new Room("Living Room", walls);
+        List<Wall> bRoomWalls = new ArrayList<>();
+        bRoomWalls.add(new Wall(1500, 260));
+        bRoomWalls.add(new Wall(1000, 260));
+        bRoomWalls.add(new Wall(500, 260));
+        bRoomWalls.add(new Wall(500, 260));
+        bRoomWalls.add(new Wall(500, 260));
+        bRoomWalls.add(new Wall(1000, 260));
+
+        Room livingRoom = new Room("Living Room", livingRoomWalls, countryRoses);
+        Room breakfastRoom = new Room("Breakfast Room", bRoomWalls, awningStripe);
         System.out.println(livingRoom.toString());
-//        Room breakfastRoom = new Room("Breakfast Room", 6);
+        System.out.println(livingRoom.roomWallArea());
+
+        livingRoom.noOfRolls();
+        breakfastRoom.noOfRolls();
     }
 
 
-
 }
+

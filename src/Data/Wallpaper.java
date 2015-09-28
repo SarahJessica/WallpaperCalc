@@ -3,7 +3,7 @@ package Data;
 /**
  * Created by leives01 on 21/09/15.
  */
-public class Wallpapers {
+public class Wallpaper {
 
     public boolean inStock;
     public String name;
@@ -12,7 +12,7 @@ public class Wallpapers {
     public int patternRepeat; //cm
 
 
-    public Wallpapers(boolean inStock, String name, int width, int patternRepeat, int rollLength){
+    public Wallpaper(boolean inStock, String name, int width, int patternRepeat, int rollLength){
         this.inStock = inStock;
         this.name = name;
         this.width = width;
